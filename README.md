@@ -25,7 +25,7 @@ We first start by uniformly sampling a batch of images from the dataset upon whi
 
 The loss is calculated using a variant of the NCE loss as following:
 
-$$\mathcal{L}_q = -\log \frac{\exp(q \cdot k_+ / \tau)}{\sum_{i=0}^K \exp(q \cdot k_i / \tau)}$$
+$$L_q = -\log {\frac{\exp(q \cdot k_+ / t)}{\sum_{i=0}^K \exp(q \cdot k_i / t) + \exp(q \cdot k_+ / t)}}$$
 
 *where:*
 
